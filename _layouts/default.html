@@ -82,5 +82,18 @@ layout: compress
     {% endfor %}
 
     {% include_cached search-loader.html lang=lang %}
+
+    {% if page.layout == "post" %}
+    <style>
+        #sidebar {
+          transform: translateX(-260px); /* hide */
+          -webkit-transform: translateX(-260px);
+        }
+        #main-wrapper {
+          margin-left: 10%;
+          margin-right: 5%;
+        }
+    </style>
+    {% endif %}
   </body>
 </html>
